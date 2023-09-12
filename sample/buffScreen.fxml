@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.BuffScreenController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: F6DE91;">
+         <center>
+            <TilePane alignment="CENTER" prefHeight="492.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="attackBuffImage" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#attackBuffImageOnClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../characters/attackBuff.png" />
+                     </image>
+                     <TilePane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </TilePane.margin>
+                     <effect>
+                        <Reflection fraction="1.0" topOpacity="0.15" />
+                     </effect>
+                  </ImageView>
+                  <ImageView fx:id="healthBuffImage" fitHeight="150.0" fitWidth="200.0" onMouseClicked="#healthBuffImageOnClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../characters/healthBuff.png" />
+                     </image>
+                     <TilePane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </TilePane.margin>
+                     <effect>
+                        <Reflection fraction="1.0" topOpacity="0.15" />
+                     </effect>
+                  </ImageView>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="30.0" />
+               </BorderPane.margin>
+            </TilePane>
+         </center>
+         <top>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a team buff" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="62.0" />
+               </font>
+            </Text>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
